@@ -1,4 +1,20 @@
-  
+
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+.class{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+
+.minchou{
+  font-family: 'Noto Serif JP', serif;
+}
+
+
+
 $(function(){
 
   //←windowオブジェクトにloadイベントをバインド

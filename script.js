@@ -157,6 +157,61 @@ $(function(){
           
         }
       });
+
+
+      //親の要素をいじる
+      $(".li_contents ul.link-list li a").on({
+        'mouseenter' : function(){
+          $(this).parent().addClass('active')
+        },
+        'mouseleave' : function(){
+          $(this).parent().removeClass('active')
+        }
+      });
+
+
+
+      //親のindexをとってクラスつける　写真ふわっとだす 数種類　最初の画像はあらかじめ .active つけとく
+      $("#service-text-list li a").on({
+        'mouseenter' : function(){
+          var index = $(this).parent().index();
+          $(".slideAndContents-images-list li").removeClass('active')
+          $(".slideAndContents-images-list li").eq(index).addClass('active')
+        },
+        'mouseleave' : function(){
+          
+        }
+      });
+
+    
+      //cssはこんな感じ　画像重ねる　
+      // .slideAndContents-images-list{
+      //   position: relative;
+      // }
+      // .slideAndContents-images-list li{
+      //   position: absolute;
+      // }
+      // .slideAndContents-images-list li img{
+      //   -webkit-transition: all 0.5s;
+      //   -moz-transition: all 0.5s;
+      //   -ms-transition: all 0.5s;
+      //   -o-transition: all 0.5s;
+      //   transition: all 0.5s;
+      //   -webkit-opacity: 0;
+      // 　-moz-opacity: 0;
+      // 　-o-opacity: 0;
+      // 　filter: alpha(opacity=0);	/* IE lt 8 */
+      // 　-ms-filter: "alpha(opacity=0)"; /* IE 8 */
+      // 　opacity: 0;
+      // }
+      // .slideAndContents-images-list li.active img{
+      //   -webkit-opacity: 1;
+      // 　-moz-opacity: 1;
+      // 　-o-opacity: 1;
+      // 　filter: alpha(opacity=100);	/* IE lt 8 */
+      // 　-ms-filter: "alpha(opacity=100)"; /* IE 8 */
+      // 　opacity: 1;
+      // }
   
 
 
